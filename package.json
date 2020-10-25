@@ -2,12 +2,12 @@
   "name": "countries_info_api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "clean": "npm rm -rf build && npm run build-babel",
     "build-babel": "babel -d ./build ./src -s",
     "build": "npm run clean && npm run build-babel",
-    "start": "npm run build && nodemon build/index.js",
+    "start": "nodemon --exec babel-node ./src/index.js",
     "migration": "npm run migrate:undo && npm run migrate",
     "migrate": "sequelize db:migrate",
     "migrate:undo": "sequelize db:migrate:undo:all",
@@ -37,8 +37,9 @@
   "devDependencies": {
     "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
-    "@babel/node": "^7.10.5",
+    "@babel/node": "^7.12.1",
     "@babel/preset-env": "^7.11.5",
+    "@babel/register": "^7.12.1",
     "nodemon": "^2.0.4"
   }
 }
