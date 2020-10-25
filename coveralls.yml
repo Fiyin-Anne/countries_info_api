@@ -1,0 +1,2 @@
+repo_token: 9py1vv8zadDWJ8FAXfmzvgG3KN8AVL3VD
+COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
