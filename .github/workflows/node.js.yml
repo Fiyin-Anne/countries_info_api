@@ -19,9 +19,11 @@ jobs:
     - run: npm run coverage
 
   coverage:
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      env:
+    name: Coveralls
+
+    steps:
+    - uses: coverallsapp/github-action@master
+    - env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
         COVERALLS_GIT_BRANCH: ${{ github.ref }}
       with:
