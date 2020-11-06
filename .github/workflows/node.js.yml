@@ -26,8 +26,8 @@ jobs:
         node-version: [12.x, 14.x]
           
     steps:
-     - uses: coverallsapp/github-action@master
-        env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+    - uses: coverallsapp/github-action@master
+      env:
+        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
