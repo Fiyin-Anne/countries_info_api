@@ -20,7 +20,7 @@ jobs:
 
   coverage:
     name: Coveralls
-    runs-on: windows-latest
+    runs-on: [macos-latest, windows-latest]
     strategy:
       matrix:
         node-version: [12.x, 14.x]
